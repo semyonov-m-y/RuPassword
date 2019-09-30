@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clip xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <level-list>
+        <item android:minLevel="0" android:maxLevel="1500">
+            <shape>
+                <solid android:color="@color/colorAccent"/>
+                <size android:width="48dp" android:height="48dp"/>
+            </shape>
+        </item>
+
+        <item android:minLevel="1501" android:maxLevel="4000">
+            <shape>
+                <solid android:color="@color/colorOrange"/>
+                <size android:width="48dp" android:height="48dp"/>
+            </shape>
+        </item>
+
+        <item android:minLevel="4001" android:maxLevel="8000">
+            <shape>
+                <solid android:color="@color/colorYellow"/>
+                <size android:width="48dp" android:height="48dp"/>
+            </shape>
+        </item>
+
+        <item android:minLevel="8001" android:maxLevel="10000">
+            <shape>
+                <solid android:color="@color/colorGreen"/>
+                <size android:width="48dp" android:height="48dp"/>
+            </shape>
+        </item>
+    </level-list>
+
+</clip>

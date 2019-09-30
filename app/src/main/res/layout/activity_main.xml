@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        tools:context=".MainActivity"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/type_your_ru_password"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/result_border"
+            >
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Result"
+                android:layout_marginTop="@dimen/result_margin_top"
+                android:layout_marginBottom="@dimen/result_margin_bottom"
+                android:textAppearance="@style/ResultTextAppearance"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:id="@+id/button_copy_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_content_copy_black_24dp"
+                android:padding="@dimen/copy_button_padding"
+                android:enabled="false"
+                android:hint="@string/copy_password_button"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/password_value"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                tools:text="Result"
+                android:layout_marginTop="@dimen/result_margin_top"
+                android:layout_marginBottom="@dimen/result_margin_bottom"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:text="@string/enter_password"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                />
+
+            <ImageView
+                android:id="@+id/password_value_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/copy_button_padding"
+                android:src="@drawable/clip_drawable"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="flagNoExtractUi"
+            android:hint="@string/enter_password_hint"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generate_new_password"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            />
+
+        <CheckBox
+            android:id="@+id/check_caps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/uppercase"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:id="@+id/check_digits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/numbers"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:id="@+id/check_symbols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/special_symbols"
+            />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_password_length"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                />
+
+            <TextView
+                android:id="@+id/password_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/result_border"
+            >
+
+            <TextView
+                android:id="@+id/generated_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Result"
+                android:layout_marginTop="@dimen/result_margin_top"
+                android:layout_marginBottom="@dimen/result_margin_bottom"
+                android:textAppearance="@style/ResultTextAppearance"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:id="@+id/second_button_copy_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_content_copy_black_24dp"
+                android:padding="@dimen/copy_button_padding"
+                android:enabled="false"
+                android:autofillHints="@string/copy_generated_password_button"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_generate_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generate"
+            android:background="@drawable/gradient"
+            android:layout_marginTop="16dp"
+            />
+
+        <Button
+            android:id="@+id/button_send_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_password"
+            android:background="@drawable/send_pass_gradient"
+            android:layout_marginTop="8dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
