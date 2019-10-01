@@ -51,4 +51,9 @@ public class PasswordsHelperTest {
     public void testNullThrows() {
         helper.convert(null);
     }
+
+    @Test
+    public void generatePasswordConstructor() {
+        
+    }
 }

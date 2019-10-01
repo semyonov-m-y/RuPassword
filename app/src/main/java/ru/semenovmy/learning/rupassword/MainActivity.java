@@ -95,14 +95,14 @@ public class MainActivity extends Activity {
                     return;
                 }
 
-                if (v.equals(resultTextView)) {
+                if (v.equals(copyButton)) {
                     manager.setPrimaryClip(
                             ClipData.newPlainText(
                                     getString(R.string.clipboard_title), resultTextView.getText().toString())
                     );
                 }
 
-                if (v.equals(generatedTextView)) {
+                if (v.equals(copyButtonSecond)) {
                     manager.setPrimaryClip(
                             ClipData.newPlainText(
                                     getString(R.string.clipboard_title), generatedTextView.getText().toString())
